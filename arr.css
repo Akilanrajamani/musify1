@@ -1,0 +1,302 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.homepage {
+    background-image: url(./music\ home.jpg);
+    background-size: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: relative;
+}
+
+.floating-img {
+    position: absolute;
+    opacity: 0.7;
+    animation-name: tune;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes tune {
+    0% {
+        top: 80%;
+    }
+
+    100% {
+        top: 0;
+        opacity: 0;
+    }
+}
+
+.homepage img:nth-child(2) {
+    height: 120px;
+    animation-duration: 10s;
+}
+
+.homepage img:nth-child(3) {
+    height: 100px;
+    left: 10%;
+    animation-duration: 16s;
+}
+
+.homepage img:nth-child(4) {
+    height: 70px;
+    left: 20%;
+    animation-duration: 11s;
+}
+
+.homepage img:nth-child(5) {
+    height: 80px;
+    left: 30%;
+    animation-duration: 12s;
+}
+
+.homepage img:nth-child(6) {
+    height: 130px;
+    left: 40%;
+    animation-duration: 14s;
+}
+
+.homepage img:nth-child(7) {
+    height: 90px;
+    left: 50%;
+    animation-duration: 17s;
+}
+
+.homepage img:nth-child(8) {
+    height: 100px;
+    left: 60%;
+    animation-duration: 15s;
+}
+
+.homepage img:nth-child(9) {
+    height: 90px;
+    left: 70%;
+    animation-duration: 9s;
+}
+
+.homepage img:nth-child(10) {
+    height: 70px;
+    left: 80%;
+    animation-duration: 19s;
+}
+
+.homepage>img:first-child {
+    height: 40px;
+    left: 84%;
+    animation-duration: 11.5s;
+    display: none;
+}
+
+.navbar img:first-child {
+    height: 100px;
+}
+
+.navbar label i {
+    font-size: 26px;
+}
+
+.navbar {
+    width: 100%;
+    height: 100px;
+    background-color:navy;
+    opacity: 0.90;
+    padding: 0 20px 0 0;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 1;
+    top: 20px;
+    border-radius: 20px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    transition: all 1.5s;
+}
+
+.button-container button {
+    background-color: transparent;
+    padding: 10px 28px;
+    border: none;
+    font-size: 16px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.button-container a {
+    color: white;
+    text-decoration: none;
+}
+
+.button-container button:hover {
+    border-bottom: 2px solid white;
+    border-left: 2px solid white;
+    transform: scale(1.1, 1.1);
+}
+
+i {
+    font-size: 18px;
+    color: white;
+}
+
+.navbar input:checked~.button-container {
+    background-image: linear-gradient(to right,navy,navy, transparent);
+    left: 0;
+}
+
+.navbar label,#box,h1 {
+    display: none;
+}
+
+.navbar h1 {
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 1px 1px 5px white, -1px -1px 5px skyblue;
+    color: white;
+}
+
+.row {
+    background-color:navy;
+    min-height: 60px;
+}
+
+.row img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+.music {
+    width: 95%;
+}
+
+.love-songs {
+    position: absolute;
+    top: 29%;
+    width: 90%;
+    left: 5%;
+}
+
+.music-icon-holder {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.music-icon-holder i {
+    font-size: 20px;
+    background-color:navy;
+    color: white;
+    padding: 15px;
+    border-radius: 30px;
+}
+
+.music-icon-holder i:hover {
+    background-color: whitesmoke;
+    color:navy;
+}
+.love-songs img{
+    object-fit: cover;
+}
+.back{
+    background-color:navy;
+    color: white;
+    padding: 10px 35px;
+    border: transparent;
+    position: relative;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+
+@media screen and (max-width:1400px) {
+    .homepage {
+        height: 680px;
+    }
+
+    .button-container {
+        position: fixed;
+        top: 100px;
+        left: -100%;
+        height: 80vh;
+        flex-direction: column;
+        justify-content: start;
+        padding-top: 50px;
+        border-radius: 0 0 20px 20px;
+    }
+
+    .button-container button:hover {
+        border-right: 2px solid white;
+    }
+
+    .navbar {
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .navbar label,
+    h1 {
+        display: inline;
+    }
+
+    .button-container {
+        width: 100%;
+    }
+
+    .login button {
+        padding: 10px;
+    }
+}
+
+@media screen and (min-width:300px) and (max-width:750px) {
+    .login {
+        width: 90%;
+        height: 70vh;
+        left: 46%;
+        top: 40%;
+        display: block;
+        border-radius: unset;
+    }
+
+    .music-icon-holder i {
+        font-size: 15px;
+        padding: 6px;
+    }
+
+    .music-icon-holder {
+        gap: 5px;
+    }
+
+    .love-songs {
+        width: 97%;
+        left: 0;
+    }
+}
+
+@media screen and (min-width:300px) and (max-width:500px) {
+    .footer-button {
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width:550px) and (max-width:720px) {
+    .love-songs {
+        width: 99%;
+    }
+}
+
+
+
+
